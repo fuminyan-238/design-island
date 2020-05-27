@@ -1,0 +1,11 @@
+= render "header"
+      
+.contents
+  .contents__postArea
+    - @posts.each do |post|
+      .contents__postArea__post
+        =link_to post_path(post.id) do
+          = image_tag post.image, size: "200x200"
+          = post.title
+
+.footer

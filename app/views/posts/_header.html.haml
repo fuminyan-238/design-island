@@ -1,0 +1,33 @@
+.title
+  = link_to root_path, class:"title__message" do
+    %h1 デザインで彩る島暮らし
+
+.header
+  .header__contents
+    %ul
+      %li<
+        服
+      %li
+        被り物
+      %li<
+        壁紙
+      %li<
+        床 
+      %li<
+        家具
+      %li<
+        道
+      %li<
+        - if user_signed_in?
+          %li.headder__box__btm__right__login
+            = link_to new_post_path, class: "" do
+              新規投稿
+            = link_to destroy_user_session_path, method: :delete, class: "" do
+              ログアウト
+        - else
+          %li.headder__box__btm__right__login
+            = link_to new_user_session_path, class: "link login" do
+              ログイン
+          %li.headder__box__btm__right__signup
+            = link_to new_user_registration_path, class: "link signup" do
+              新規会員登録

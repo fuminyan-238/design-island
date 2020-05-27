@@ -1,0 +1,11 @@
+= render "header"
+.contents
+  = link_to "#", class:"" do
+    商品を編集する
+  = link_to "#", class:"", method: :delete, data: {confirm: "削除しますか？"} do
+    商品を削除する
+  .contents__post
+    = @post.title
+    = @post.designid
+    = @post.text
+    = image_tag @post.image

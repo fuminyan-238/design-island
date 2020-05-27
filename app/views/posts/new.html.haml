@@ -1,0 +1,14 @@
+= render "header"
+%h1 新規投稿
+
+.submit-area
+  = form_for @post do |f|
+    .submit-area__content
+      = f.label :title, "タイトル"
+      = f.text_field :title
+      = f.label :designid, "デザインID"
+      = f.text_field :designid
+      = f.file_field :image
+      = f.label :text, "本文"
+      = f.text_area :text
+      = f.submit "投稿"
