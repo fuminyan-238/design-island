@@ -4,8 +4,12 @@
   .contents__postArea
     - @posts.each do |post|
       .contents__postArea__post
-        =link_to post_path(post.id) do
-          = image_tag post.image, size: "200x200"
-          = post.title
-
-.footer
+        =link_to post_path(post.id),class:"contents__postArea__post__item" do
+          = image_tag post.image, size: "200x200",class:"contents__postArea__post__item__left"
+          .contents__postArea__post__item__right
+            = post.title
+            %br
+            = "デザインID:    " + "#{post.designid}"
+            %br
+            = post.text.truncate(60)
+= render "footer"

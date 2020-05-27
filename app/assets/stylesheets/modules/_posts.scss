@@ -1,19 +1,21 @@
 * {
   box-sizing: border-box;
+  font-family: 'mamelon';
 }
 .title {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  background-color: skyblue;
   width: 100%;
-  height: 300px;
-  line-height: 300px;
-  background-image: image-url('title-sima.jpg');
+  height: 200px;
+  line-height: 200px;
+  background-image: image-url('title.jpg');
   background-size: cover;
+  background-position: center;
   &__message {
     text-decoration: none;
-    color: whitesmoke;
+    color: black;
+    font-family: 'mamelon';
   }
 }
 
@@ -44,14 +46,95 @@
     background-color: whitesmoke;
     margin: 0 auto;
     padding-top: 20px;
+    padding-bottom: 10px;
   &__post {
+    margin: 0 20px;
     text-align: center;
     padding: 10px 0 10px 20px;
     margin-bottom: 20px;
     display: block;
-    display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    background-color: #eee;
+    &__item {
+      display: flex;
+      text-decoration: none;
+      &__left {
+        // float: left;
+      }
+      &__right {
+        // float: right;
+        padding-left: 20px;
+        text-decoration: none;
+        line-height: 40px;
+        color: black;
+      }
+    }
+    
   }
+  }
+}
+
+.btn {
+  background-color: red;
+  margin-left: 150px;
+  color: white;
+  width: 200px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 8px 4px;
+  text-decoration: none;
+}
+
+.contents {
+  &__postArea {
+    &__main {
+      text-align: center;
+      padding: 20px 90px;
+      &__title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      &__designId {
+        font-size: 18px;
+        font-weight: 400;
+        padding: 20px 0;
+      }
+      &__text {
+        text-align: left;
+      }
+    }
+    &__edit {
+
+    }
+  }
+}
+
+.contents {
+  &__postArea {
+    h1 {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &__submit {
+      padding-left: 40px;      
+    }
+  }
+}
+
+.footer {
+  height: 100px;
+  background-image: image-url('fotterimg.png');
+  background-position: center;
+  background-size: cover;
+  &__text {
+    text-align: center;
+    line-height: 100px;
+    color: white;
   }
 }
 

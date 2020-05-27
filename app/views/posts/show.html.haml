@@ -1,11 +1,22 @@
 = render "header"
 .contents
-  = link_to "#", class:"" do
-    商品を編集する
-  = link_to "#", class:"", method: :delete, data: {confirm: "削除しますか？"} do
-    商品を削除する
-  .contents__post
-    = @post.title
-    = @post.designid
-    = @post.text
-    = image_tag @post.image
+  .contents__postArea
+    .contents__postArea__edit
+    - if user_signed_in? && @post.user_id == current_user.id
+      = link_to "#", class:"btn" do
+        商品を編集する
+      = link_to "#", class:"btn", method: :delete, data: {confirm: "削除しますか？"} do
+        商品を削除する
+    .contents__postArea__main
+      .contents__postArea__main__title
+        = @post.title
+        %br
+      .contents__postArea__main__image
+        = image_tag @post.image
+        %br
+      .contents__postArea__main__designId
+        = "デザインID : " + "#{@post.designid}"
+        %br
+      .contents__postArea__main__text
+        = @post.text
+= render "footer"
