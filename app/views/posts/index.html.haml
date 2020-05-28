@@ -2,6 +2,8 @@
       
 .contents
   .contents__postArea
+    %h2
+      投稿一覧
     - @posts.each do |post|
       .contents__postArea__post
         =link_to post_path(post.id),class:"contents__postArea__post__item" do
@@ -12,4 +14,6 @@
             = "デザインID:    " + "#{post.designid}"
             %br
             = post.text.truncate(60)
+  .contents__paginate
+    = paginate(@posts)
 = render "footer"
