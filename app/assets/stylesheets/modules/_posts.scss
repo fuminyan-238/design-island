@@ -173,6 +173,16 @@
       @include explanatoryText;      
     }
   }
+  &__paginate {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    span {
+      text-decoration: none;
+      color: black;
+    }
+    
+  }
 }
 
 .footer {

@@ -14,4 +14,6 @@
             = "デザインID:    " + "#{post.designid}"
             %br
             = post.text.truncate(60)
+  .contents__paginate
+    = paginate(@posts)
 = render "footer"
