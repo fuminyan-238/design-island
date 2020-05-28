@@ -64,3 +64,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'kaminari'
+
+group :production do
+  gem 'unicorn'
+end
