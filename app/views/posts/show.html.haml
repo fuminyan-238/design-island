@@ -19,4 +19,9 @@
         %br
       .contents__postArea__main__text
         = @post.text
+  .contents__commentArea
+    - if current_user
+      = form_for @comment do |f|
+        = f.text_area :text, placeholder: "コメントを入力してください"
+        = f.submit "コメントする"
 = render "footer"
