@@ -24,4 +24,6 @@
       = form_for [@post, @comment] do |f|
         = f.text_area :text, placeholder: "コメントを入力してください"
         = f.submit "コメントする"
+    - else
+      
 = render "footer"
