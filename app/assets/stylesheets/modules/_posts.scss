@@ -170,7 +170,7 @@
     }
     &__submit {
       padding: 0 40px;
-      @include explanatoryText;      
+      @include explanatoryText;
     }
   }
   &__paginate {
@@ -184,6 +184,16 @@
     
   }
   &__commentArea {
+    width: 700px;
+    background-color: whitesmoke;
+    margin: 20px auto;
+    padding: 20px;
+    p {
+      text-align: center;
+    }
+  }
+
+  &__commentList {
     width: 700px;
     background-color: whitesmoke;
     margin: 20px auto;

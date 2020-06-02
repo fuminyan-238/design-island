@@ -29,5 +29,11 @@
     - else
       %p
         コメントの投稿には、ユーザー登録/ログインが必要です
+  .contents__commentList
+    %h4
+      コメント一覧
+    - if @comments
+      - @comments.each do |comment|
+        = comment.text
 
 = render "footer"
