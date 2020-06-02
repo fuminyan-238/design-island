@@ -22,8 +22,12 @@
   .contents__commentArea
     - if current_user
       = form_for [@post, @comment] do |f|
-        = f.text_area :text, placeholder: "コメントを入力してください"
-        = f.submit "コメントする"
+        .contents__commentArea__submit
+          = f.text_area :text, placeholder: "コメントを入力してください"
+          %br
+          = f.submit "コメントする"
     - else
-      
+      %p
+        コメントの投稿には、ユーザー登録/ログインが必要です
+
 = render "footer"
