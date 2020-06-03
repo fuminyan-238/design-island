@@ -198,6 +198,13 @@
     background-color: whitesmoke;
     margin: 20px auto;
     padding: 20px;
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &__comment {
+      padding-top: 10px;
+    }
   }
 }
 

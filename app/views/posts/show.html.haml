@@ -34,6 +34,9 @@
       コメント一覧
     - if @comments
       - @comments.each do |comment|
-        = comment.text
+        .contents__commentList__comment
+          = "#{comment.user.name}" + ":"
+          = comment.text
+          %br
 
 = render "footer"
