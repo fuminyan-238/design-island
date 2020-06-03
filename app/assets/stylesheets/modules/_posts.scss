@@ -30,6 +30,45 @@
   }
 }
 
+
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 16px;
+}
+
+input[type="file"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 25px;
+  height: 48px;
+  padding: 0 16px;
+}
+
+#post_text {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 16px;
+}
+
+input[type="submit"] {
+  width: 300px;
+  padding: 20px 0;
+  margin-left: 170px;
+  cursor: pointer;
+  background-color:skyblue;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
 .title {
   font-size: 30px;
   font-weight: bold;
@@ -83,6 +122,18 @@
   background-color:rgba(255,255,255,0.5);
   background-blend-mode:lighten;
   padding: 30px 0;
+  &__seachArea {
+    width: 700px;
+    background-color: whitesmoke;
+    margin: 10px auto;
+    padding: 20px 50px;
+    &__form {
+      padding: 0 30px;
+      &__iuput {
+        margin: 0 30px;
+      }
+    }
+  }
   &__postArea {
     width: 700px;
     background-color: whitesmoke;
@@ -101,16 +152,13 @@
     padding: 10px 0 10px 20px;
     margin-bottom: 20px;
     display: block;
-    // justify-content: space-between;
     background-color: #eee;
     &__item {
       display: flex;
       text-decoration: none;
       &__left {
-        // float: left;
       }
       &__right {
-        // float: right;
         padding-left: 20px;
         text-decoration: none;
         line-height: 40px;
@@ -231,40 +279,3 @@
 
 
 
-input[type="text"] {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 25px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  height: 48px;
-  padding: 0 16px;
-}
-
-input[type="file"] {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 25px;
-  height: 48px;
-  padding: 0 16px;
-}
-
-#post_text {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 25px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0 16px;
-}
-
-input[type="submit"] {
-  width: 300px;
-  padding: 20px 0;
-  margin-left: 170px;
-  cursor: pointer;
-  background-color:skyblue;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-}

@@ -35,7 +35,7 @@
     - if @comments
       - @comments.each do |comment|
         .contents__commentList__comment
-          = "#{comment.user.name}" + ":"
+          = "#{comment.user.name}" + " : "
           = comment.text
           %br
 
