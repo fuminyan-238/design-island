@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
   before_action :set_post, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @posts = Post.all.order("created_at DESC").page(params[:page]).per(5)
@@ -26,6 +26,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
 
   def edit
@@ -41,6 +43,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+  end
+  
   private
   def post_params
     params.require(:post).permit(:title, :designid, :text, :image).merge(user_id: current_user.id)

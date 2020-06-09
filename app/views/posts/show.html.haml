@@ -19,4 +19,24 @@
         %br
       .contents__postArea__main__text
         = @post.text
+  .contents__commentArea
+    - if current_user
+      = form_for [@post, @comment] do |f|
+        .contents__commentArea__submit
+          = f.text_area :text, placeholder: "コメントを入力してください"
+          %br
+          = f.submit "コメントする"
+    - else
+      %p
+        コメントの投稿には、ユーザー登録/ログインが必要です
+  .contents__commentList
+    %h4
+      コメント一覧
+    - if @comments
+      - @comments.each do |comment|
+        .contents__commentList__comment
+          = "#{comment.user.name}" + " : "
+          = comment.text
+          %br
+
 = render "footer"
