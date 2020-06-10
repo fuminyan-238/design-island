@@ -38,9 +38,14 @@
 ## 実装内容
 ・ユーザーログイン機能
 ・デザイン投稿機能
+・コメント機能
+
+<img src = "https://user-images.githubusercontent.com/63274382/84219757-38419200-ab0c-11ea-81ab-fa522cc5c770.jpg" width="600px;" />
+
+<img src ="https://user-images.githubusercontent.com/63274382/84220023-d2a1d580-ab0c-11ea-9353-ae65a4e67289.gif" width="600px;" />
+
 
 ## 今後実装予定の機能
-・コメント機能
 ・検索機能
 ・いいね機能
 ・いいねの数順に投稿をソートする機能
