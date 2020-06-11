@@ -2,7 +2,7 @@
       
 .contents
   .contents__seachArea
-    = form_tag url: "/posts/search", method: :get, class: "contents__seachArea__form" do
+    = form_tag url: search_posts_path, method: :get, class: "contents__seachArea__form" do
       = text_field_tag :keyword,"",{placeholder: "投稿を検索する", class: "contents__seachArea__form__input"}
       = submit_tag "検索", class: "contents__seachArea__form__btn"
   .contents__postArea
