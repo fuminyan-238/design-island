@@ -1,1 +1,23 @@
 = render "header"
+
+.contents
+  .contents__seachArea
+    = form_tag "/posts/search", method: :get, class: "contents__seachArea__form" do
+      = text_field_tag :keyword,"",{placeholder: "投稿を検索する", class: "contents__seachArea__form__input"}
+      = submit_tag "検索", class: "contents__seachArea__form__btn"
+  .contents__postArea
+    %h2
+      検索結果一覧
+    - @posts.each do |post|
+      .contents__postArea__post
+        =link_to post_path(post.id),class:"contents__postArea__post__item" do
+          = image_tag post.image, size: "200x200",class:"contents__postArea__post__item__left"
+          .contents__postArea__post__item__right
+            = post.title
+            %br
+            = "デザインID:    " + "#{post.designid}"
+            %br
+            = post.text.truncate(60)
+  .contents__paginate
+    = paginate(@posts)
+= render "footer"
